@@ -7,6 +7,7 @@ import {BrowserRouter as Router , Routes , Route} from 'react-router-dom'
 import Productdetail from './Components/Productdetail'
 import Searchitem from './Components/Searchitem'
 import Card from './Components/Card'
+import Checkout from './Components/checkout'
 function App() {
   const [data, setdata] = useState([...items])
   const[cart,setcart]=useState([])
@@ -20,6 +21,8 @@ function App() {
         <Route path='/product/:id' element={<Productdetail cart={cart} setcart={setcart}/>}/>
         <Route path='/search/:term' element={<Searchitem cart={cart} setcart={setcart}/>}/>
         <Route path='/cart' element={<Card cart={cart} setcart={setcart}/>}/>
+        <Route path='/checkout' element={<Checkout cart={cart} setcart={setcart} />}/>
+        
 
       </Routes>
       </Router> 

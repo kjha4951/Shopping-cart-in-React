@@ -46,13 +46,13 @@ theme="dark"/>
                         items.map((product) => {
                             return (
                                 <div className="col-lg-4 col-md-6 col-sm-12 my-3 text-center"  key={product.id}>
-                                    <div className="card" style={{ width: "18rem" }}>
+                                    <div className="card" style={{ width: "300px" , height:"510px" }}>
                                         <Link to={`/product/${product.id}`} style={{
                                             display:"flex", 
                                             justifyContent:"center",
                                             alignItems:"center",
                                             }}>
-                                        <img src={product.imgSrc} className="card-img-top" alt={product.category} />
+                                        <img src={product.imgSrc} className="card-img-top " alt={product.category} />
 
                                         </Link>
                                         <div className="card-body">

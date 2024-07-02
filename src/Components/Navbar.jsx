@@ -27,7 +27,7 @@ const Navbar = ({ setdata, cart }) => {
 
   return (
     <>
-      <header className='sticky-top'>
+      <header className='ky-top'>
         <div className='nav-bar'>
           <Link to={'/'} className='brand'> E-Commerce </Link>
 
