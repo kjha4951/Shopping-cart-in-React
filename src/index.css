@@ -40,14 +40,18 @@ input::placeholder{
     color: white;
 
 }
-.nav-bar-wrapper{
+.nav-bar-wrapper {
     display: flex;
     justify-content: space-between;
-    padding: 19px; 
-    background-color: #4b1b78;
+    padding: 1.5rem;
+    background-color: #4B1B78;
     color: white;
     font-weight: bold;
+    cursor: pointer;
 }
+
+
+
 .img{
     display: flex;
     justify-content: center;
@@ -65,4 +69,7 @@ input::placeholder{
     align-items: center;
     gap: 4rem;
 }
+
+
+
 
