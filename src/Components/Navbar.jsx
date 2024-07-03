@@ -44,18 +44,21 @@ const Navbar = ({ setdata, cart }) => {
       <header className='ky-top'>
         <div className='nav-bar'>
           <Link to={'/'} className='brand'> E-Commerce </Link>
-
-          <form
-            onSubmit={handlesubmit}
-            className="search-bar">
-            <input
-              type="text"
-              placeholder='Search Products'
-              value={searchterm}
-              onChange={(e) => setsearchterm(e.target.value)}
-            />
-          </form>
-
+  
+          {location.pathname === "/" && (
+            <form
+              onSubmit={handlesubmit}
+              className="search-bar d-flex align-items-center justify-content-center position-relative w-50 mb-3  rounded" 
+            >
+              <input
+                type="text"
+                placeholder='Search Products'
+                value={searchterm}
+                onChange={(e) => setsearchterm(e.target.value)}
+              />
+            </form>
+          )}
+  
           <Link to={'/cart'} className="cart">
             <button type="button" className="btn btn-primary position-relative">
               <BsFillCartCheckFill style={{ fontSize: "25px" }} />
@@ -66,24 +69,24 @@ const Navbar = ({ setdata, cart }) => {
             </button>
           </Link>
         </div>
-
+  
         {location.pathname === "/" && (
           <div className="nav-bar-wrapper">
             <div className="items"></div>
            
-            <select className='form-select w-25  ' onChange={handleFilterChange} value={selectedFilter}>
+            <select className='form-select w-25 ' onChange={handleFilterChange} value={selectedFilter}>
               <option value="No Filter">No Filter</option>
               <option value="Mobiles">Mobiles</option>
               <option value="Laptops">Laptops</option>
               <option value="Tablets">Tablets</option>
-              <option value=">=29999">{'>='}29999</option>
-              <option value=">=49999">{'>='}49999</option>
-              <option value=">=69999">{'>='}69999</option>
-              <option value=">=89999">{'>='}89999</option>
+              <option value=">=29999">29999</option>
+              <option value=">=49999">49999</option>
+              <option value=">=69999">69999</option>
+              <option value=">=89999">89999</option>
             </select>
           </div>
         )}
-
+  
       </header>
     </>
   )

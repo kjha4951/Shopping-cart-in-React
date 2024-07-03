@@ -8,6 +8,7 @@ import Productdetail from './Components/Productdetail'
 import Searchitem from './Components/Searchitem'
 import Card from './Components/Card'
 import Checkout from './Components/checkout'
+import UserInfoForm from './Components/Userinfo'
 function App() {
   const [data, setdata] = useState([...items])
   const[cart,setcart]=useState([])
@@ -22,6 +23,7 @@ function App() {
         <Route path='/search/:term' element={<Searchitem cart={cart} setcart={setcart}/>}/>
         <Route path='/cart' element={<Card cart={cart} setcart={setcart}/>}/>
         <Route path='/checkout' element={<Checkout cart={cart} setcart={setcart} />}/>
+        <Route path='/userinfo' element={<UserInfoForm cart={cart} setcart={setcart} />}/>
         
 
       </Routes>
